@@ -1,0 +1,66 @@
+<div class="layout">
+  <div class="container">
+    <div class="row">
+      <div class="col col-1">
+        <h3 class="mobile-hidden">111 Minutes</h3>
+        <h2 [innerHTML]="vm.title | safeHtml"></h2>
+        <img
+          src="../../../../assets/Images/ArrowLeft.svg"
+          class="arrowLeft desktop-hidden"
+          alt="ArrowLeft"
+        />
+        <ul class="mobile-hidden">
+          <li class="left-link" *ngFor="let item of vm.content">
+            <a [href]="item.link">
+              <span [innerHTML]="item.title | safeHtml"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="horizontal-line"></div>
+      <div class="col col-2">
+        <a
+          class="block-container"
+          [href]="block.link"
+          *ngFor="let block of sortArrayByIndex(vm.content)"
+        >
+          <div class="block">
+            <div class="icon-container">
+              <img
+                class="icon"
+                [src]="block.imageUri"
+                alt="{{ block.imageUri }}"
+              />
+            </div>
+
+            <div class="block-right-wrapper">
+              <div class="block-top-wrapper">
+                <h4 [innerHTML]="block.title | safeHtml"></h4>
+                <div>
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M11.3005 1.58129H0.559067V0H14V13.441H12.4187V2.69943L1.11813 14L0 12.8819L11.3005 1.58129Z"
+                      class="arrow"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="description"
+                [innerHTML]="block.description | safeHtml"
+              ></div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

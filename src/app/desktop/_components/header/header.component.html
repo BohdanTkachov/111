@@ -1,0 +1,200 @@
+<div class="layout" [ngClass]="isWhiteTheme ? 'bg-white' : 'bg-dark'">
+  <div class="content-container">
+    <div
+      class="content"
+      data-aos="fade-down"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+      [ngClass]="isWhiteTheme ? 'bg-white' : 'bg-dark'"
+    >
+      <div class="logo-dark">
+        <a href="/">
+          <img
+            src="../../../../assets/Images/headerLogoBlack.svg"
+            alt="logo"
+            class="logo-img"
+          />
+        </a>
+      </div>
+
+      <div class="logo-light">
+        <a href="/">
+          <img
+            src="../../../../assets/Images/headerLogoWhite.svg"
+            alt="logo"
+            class="logo-img"
+          />
+        </a>
+      </div>
+      <div class="links">
+        <button
+          *ngFor="let item of vm.selections"
+          class="selection-container cursor-pointer"
+          (click)="onSelectionClick(item)"
+          (mouseenter)="onSelectionHover(item)"
+          (mouseleave)="closeSelectionsMouseLeave(item)"
+        >
+          <span
+            [innerHTML]="item.title"
+            [class.green-text]="item.title == selectedSelection.title"
+          ></span>
+        </button>
+      </div>
+      <div class="burger" (click)="onClick()">
+        <div
+          class="row"
+          [@hamburguerX]="isHamburguer ? 'hamburguer' : 'topX'"
+        ></div>
+        <div
+          class="row"
+          [@hamburguerX]="isHamburguer ? 'hamburguer' : 'bottomX'"
+        ></div>
+      </div>
+      <div class="contact-us-button">
+        <button (click)="openModal()" class="btn-content">Contact us</button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="selection-block-desktop"
+    *ngIf="isAnySelectedSelection || isFixedDropDown"
+    (click)="closeSelections()"
+  >
+    <div
+      class="selection-block-desktop-container"
+      (mouseenter)="setSelectionsHovered(true)"
+      (mouseleave)="setSelectionsHovered(false)"
+    >
+      <servicesHeader
+        [vm]="selectedSelection"
+        *ngIf="selectedSelection.title == 'Services'"
+      ></servicesHeader>
+      <technologiesMenu
+        [vm]="selectedSelection"
+        *ngIf="selectedSelection.title == 'Technologies'"
+      ></technologiesMenu>
+
+      <industriesHeader
+        [vm]="selectedSelection"
+        *ngIf="selectedSelection.title == 'Industries'"
+        class="h-content"
+      >
+      </industriesHeader>
+      <blogHeader
+        [vm]="selectedSelection"
+        *ngIf="selectedSelection.title == 'Blog'"
+      ></blogHeader>
+      <caseStudiesHeader
+        [vm]="selectedSelection"
+        *ngIf="selectedSelection.title == 'Case studies'"
+      ></caseStudiesHeader>
+      <solutionsHeader
+        [vm]="selectedSelection"
+        *ngIf="selectedSelection.title == 'Solutions'"
+      ></solutionsHeader>
+    </div>
+  </div>
+
+  <div *ngIf="!isHamburguer" class="w-full">
+    <div class="mobile-content" *ngIf="!isAnySelectedSelection">
+      <div class="links-mobile">
+        <button
+          *ngFor="let item of vm.selections; let i = index; let isLast = last"
+          class="selection-container"
+          [class.border-b]="!isLast"
+          (click)="onSelectionClickMobile(item)"
+        >
+          <div class="selection-index">
+            {{ i < 9 ? "0" + (i + 1) : i + 1 }}
+          </div>
+          <div [innerHTML]="item.title" class="selection-name"></div>
+        </button>
+      </div>
+      <div class="wrapper-bottom">
+        <div class="left-part">
+          <div
+            class="city"
+            [innerHTML]="vm.footerContent.city | safeHtml"
+          ></div>
+          <div>—</div>
+          <div>
+            <a
+              href="tel:{{ vm.footerContent.phone.replace(' ', '') }}"
+              [innerHTML]="'Tel: ' + vm.footerContent.phone"
+              class="phone"
+            ></a>
+          </div>
+          <div>
+            <a
+              href="mailto: {{ vm.footerContent.email }}"
+              [innerHTML]="'Email: ' + vm.footerContent.email"
+              class="mail"
+            ></a>
+          </div>
+        </div>
+        <div class="right-part">
+          <div class="socials">
+            <h5 class="socials-header">Social networks</h5>
+            <a
+              [href]="social.link"
+              target="_blank"
+              class="social"
+              *ngFor="let social of vm.footerContent.socials"
+            >
+              <img [src]="social.imageUri" alt="icon" class="social-icon" />
+              <span [innerHTML]="social.name" class="social-name"></span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-us-button-mobile">
+          <buttonGreen contentText="CONTACT US"></buttonGreen>
+        </div>
+      </div>
+    </div>
+    <div class="selection-block" *ngIf="isAnySelectedSelection">
+      <div class="selection-info-header">
+        <button (click)="backClickHandler()" class="back-button">
+          <img
+            src="../../../../assets/Images/BackArrow.svg"
+            alt="arrow"
+            class="back-arrow"
+          />
+          <span [innerHTML]="selectedSelection.title"></span>
+        </button>
+      </div>
+      <div class="selection-item-container">
+        <servicesHeader
+          [vm]="selectedSelection"
+          *ngIf="selectedSelection.title == 'Services'"
+          class="h-content"
+        >
+        </servicesHeader>
+        <technologiesMenu
+          [vm]="selectedSelection"
+          *ngIf="selectedSelection.title == 'Technologies'"
+        ></technologiesMenu>
+        <blogHeader
+          [vm]="selectedSelection"
+          *ngIf="selectedSelection.title == 'Blog'"
+        ></blogHeader>
+        <industriesHeader
+          [vm]="selectedSelection"
+          *ngIf="selectedSelection.title == 'Industries'"
+          class="h-content"
+        >
+        </industriesHeader>
+        <solutionsHeader
+          [vm]="selectedSelection"
+          *ngIf="selectedSelection.title == 'Solutions'"
+        ></solutionsHeader>
+
+        <caseStudiesHeader
+          [vm]="selectedSelection"
+          *ngIf="selectedSelection.title == 'Case studies'"
+        >
+        </caseStudiesHeader>
+      </div>
+    </div>
+  </div>
+</div>

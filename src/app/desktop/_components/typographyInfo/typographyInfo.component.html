@@ -1,0 +1,64 @@
+<div class="layout">
+  <div class="container">
+    <div class="top-wrapper">
+      <h2>
+        <p [innerHtml]="vm.header | safeHtml"></p>
+      </h2>
+      <img
+        class="arrow"
+        src="../../../../assets/Images/ArrowDown.svg"
+        alt="arrow"
+      />
+    </div>
+    <div class="bottom-wrapper">
+      <div
+        class="left-wrapper"
+        data-aos="fade-right"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      >
+        <img class="letter" [src]="vm.imageUrl" alt="typographyImg" />
+        <p class="subHeader" [innerHtml]="vm.subHeader | safeHtml"></p>
+        <div class="colors-wrapper">
+          <div class="color-line" *ngFor="let item of vm.content">
+            <div
+              class="color"
+              *ngFor="let i of [0, 0.1, 0.2, 0.3]"
+              [ngStyle]="{
+                opacity: 1 - i,
+                'background-color': item.background
+              }"
+            >
+              <!-- forgot about inner text -->
+              <ng-container *ngIf="i == 0">
+                <p
+                  class="color-code"
+                  [ngStyle]="{ color: item.color }"
+                  [innerHtml]="item.background | safeHtml"
+                ></p>
+                <p
+                  class="color-name"
+                  [ngStyle]="{ color: item.color }"
+                  [innerHtml]="item.text | safeHtml"
+                ></p>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="description"
+        data-aos="fade-left"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      >
+        <p
+          *ngFor="let desc of vm.description"
+          [innerHtml]="desc | safeHtml"
+        ></p>
+      </div>
+    </div>
+  </div>
+</div>

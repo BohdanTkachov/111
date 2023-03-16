@@ -1,0 +1,32 @@
+<div class="layout">
+  <div class="content">
+    <h3
+      class="title"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    >
+      <img src="../../../../assets/Images/CheckIcon.svg" alt="cheeck icon" />
+      <span [innerHTML]="vm.title | safeHtml"></span>
+    </h3>
+    <div
+      class="img-container"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    >
+      <img [src]="vm.iconPath" alt="image" />
+    </div>
+    <div
+      class="text-container"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    >
+      <p [innerHTML]="vm.firstTextBlockInnerHtml | safeHtml"></p>
+    </div>
+  </div>
+</div>

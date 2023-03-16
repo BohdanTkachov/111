@@ -1,0 +1,45 @@
+.layout {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  cursor: pointer;
+
+  width: fit-content;
+}
+
+.btn-content {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+
+  align-items: center;
+  height: 56px;
+
+  background-color: #38bc64;
+
+  font-family: 'Satoshi-Bold',sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 15px;
+  color: white;
+
+  cursor: pointer;
+
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.btn-content>img {
+  margin-left: 11px;
+
+  width: 14px;
+
+}
+@media screen and (max-width: 1130px) {
+  .btn-content {
+    height: 48px;
+    line-height: 21px;
+  }  
+}

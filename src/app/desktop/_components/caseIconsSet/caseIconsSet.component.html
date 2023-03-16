@@ -1,0 +1,31 @@
+<div class="layout">
+  <div class="content">
+    <div class="upBlock">
+      <div
+        class="title"
+        [innerHTML]="vm.title | safeHtml"
+        data-aos="fade-down"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      ></div>
+      <div
+        class="description"
+        [innerHTML]="vm.description | safeHtml"
+        data-aos="fade-left"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      ></div>
+    </div>
+    <img
+      class="img"
+      alt="img"
+      [src]="GetImg()"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    />
+  </div>
+</div>

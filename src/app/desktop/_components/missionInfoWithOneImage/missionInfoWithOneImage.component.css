@@ -1,0 +1,117 @@
+.layout {
+    padding: 0 80px;
+}
+
+.main-container {
+    background-color: #F8F7F2;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    margin-top: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Satoshi-Black", sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    text-transform: uppercase;
+    line-height: 49px;
+    margin-bottom: 25px;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.image-container .image {
+    width: 100%;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.first-text-element {
+    margin-right: 90px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-family: "Satoshi-Medium";
+
+    width: 80%;
+    margin: auto;
+    margin-bottom: 120px;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 1130px) {
+    .layout {
+        padding: 0;
+    }
+
+    .main-container {
+        background-color: #F8F7F2;
+        display: flex;
+        flex-direction: column;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        font-family: "Satoshi-Medium";
+        margin-top: 16px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 64px;
+        width: auto;
+
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: auto;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .first-text-element {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .header{
+        margin-top: 40px;
+    }
+}

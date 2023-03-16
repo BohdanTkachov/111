@@ -1,0 +1,21 @@
+<div class="layout">
+  <div class="content">
+    <h4
+      class="title"
+      [innerHTML]="vm.title | safeHtml"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    ></h4>
+
+    <span
+      class="description"
+      [innerHTML]="vm.description | safeHtml"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    ></span>
+  </div>
+</div>

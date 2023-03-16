@@ -1,0 +1,249 @@
+.layout {
+  width: 100%;
+}
+
+.container {
+  width: 87%;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  padding-bottom: 94px;
+  border-bottom: 1px solid #DCDCDC;
+}
+
+.desktop-hidden {
+  display: none;
+}
+
+.top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.arrow {
+  width: 50px;
+}
+
+h2 {
+  margin: 0;
+
+  font-family: "Satoshi-Black";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 76px;
+  line-height: 116px;
+  text-transform: uppercase;
+  color: #183028;
+}
+
+h2:first-child {
+  margin-left: 54px;
+}
+
+.bottom-wrapper {
+  display: flex;
+  margin-top: 120px;
+}
+
+.col {
+  padding-bottom: 45px;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.col-1 {
+  padding-right: 10%;
+  border-right: 1px solid #dcdcdc;
+  padding-left: 42px;
+}
+
+p {
+  margin: 0;
+}
+
+.challenge-description,
+.solution-description {
+  font-family: "Satoshi-Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #183028;
+}
+
+p:nth-child(n + 2) {
+  margin-top: 24px;
+}
+
+.col-2 {
+  padding-left: 88px;
+}
+
+h4 {
+  margin: 0;
+  margin-top: 40px;
+
+  font-family: "Satoshi-Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+  color: #4f4f4f;
+}
+
+.services-wrapper {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 95%;
+}
+
+.service {
+  padding: 8px 16px;
+  border: 1px solid #38bc64;
+  border-radius: 22px;
+  margin-right: 8px;
+  margin-top: 8px;
+
+  font-family: "Satoshi-Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #183028;
+}
+
+@media screen and (max-width: 1130px) {
+  :host p>>>br {
+    display: none;
+  }
+
+  .desktop-hidden {
+    display: block;
+  }
+
+  .container {
+    width: 90%;
+
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  h2 {
+    font-size: 23px;
+    line-height: 17px;
+  }
+
+  h2:first-child {
+    margin: 0;
+  }
+
+  .arrow {
+    width: 12px;
+  }
+
+  .top-wrapper {
+    width: 100%;
+  }
+
+  .bottom-wrapper {
+    margin-top: 24px;
+    padding-top: 40px;
+    border-top: 1px solid #dcdcdc;
+    flex-direction: column;
+  }
+
+  .col {
+    padding: 0;
+    border: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col>* {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  h3 {
+    margin: 0;
+
+    font-family: "Satoshi-Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    color: #000000;
+  }
+
+  .challenge-description>p,
+  .solution-description>p {
+    margin-top: 16px;
+
+    font-family: "Satoshi-Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #183028;
+  }
+
+  .solution-description, .challenge-description {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .solution-description>p {
+    padding-right: 16px;
+  }
+
+  .col-2 {
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid #dcdcdc;
+  }
+
+  h4 {
+    margin-top: 16px;
+
+    font-family: "Satoshi-Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 22px;
+    color: #4f4f4f;
+  }
+
+  .services-wrapper {
+    margin-top: 0;
+
+  }
+
+  .service {
+    padding: 8px 12px;
+    border: 1px solid #38bc64;
+    border-radius: 22px;
+    margin-right: 0px;
+    margin-top: 8px;
+
+    font-family: "Satoshi-Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 15px;
+    color: #183028;
+    width: fit-content;
+    white-space: nowrap;
+  }
+
+  .service-container {
+    width: 47%;
+  }
+}

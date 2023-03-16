@@ -1,0 +1,75 @@
+<div class="layout">
+  <div class="content">
+    <div
+      class="header"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    >
+      <div class="title" [innerHTML]="vm.title | safeHtml"></div>
+      <img
+        src="../../../../assets/Images/ArrowDown.svg"
+        alt="arrow"
+        class="arrow-down"
+      />
+    </div>
+    <div class="content-contailner">
+      <div
+        class="left"
+        data-aos="fade-right"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      >
+        <div class="left-title">STAGES</div>
+        <div
+          class="left-item"
+          *ngFor="let itemLeft of vm.stages; let index = index"
+        >
+          <span
+            >[<span
+              [innerHTML]="
+                (index < 9 ? '0' + (index + 1) : '' + index + 1) | safeHtml
+              "
+            ></span
+            >] <span [innerHTML]="itemLeft.title | safeHtml"></span
+          ></span>
+        </div>
+      </div>
+      <div
+        class="right"
+        data-aos="fade-left"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      >
+        <div
+          class="right-item"
+          *ngFor="let rightItem of stagesWithoutLastChild()"
+        >
+          <div>
+            <div
+              class="stage-title"
+              [innerHTML]="rightItem.title | safeHtml"
+            ></div>
+            <div
+              class="right-stage-child"
+              *ngFor="let item of rightItem.stages"
+              [innerHTML]="item | safeHtml"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="description"
+        [innerHTML]="vm.description | safeHtml"
+        data-aos="fade-left"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      ></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,103 @@
+.content {
+  margin-top: 88px;
+}
+.firstTitle {
+  color: #4F4F4F;
+  text-transform: uppercase;
+  margin-bottom: 23px;
+  font-family: "Satoshi-Bold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: #4f4f4f;
+}
+.secondTitle {
+  color:#111D19;
+  text-transform: uppercase;
+  font-family: "Satoshi-Black", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 61px;
+}
+.upBlock {
+  width: 87%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+.leftBlock {
+  width: 40%;
+}
+.rightBlock {
+  margin-top: 70px;
+  width: 52%;
+  padding-left: 72px;
+}
+.img {
+  margin-top: 64px;
+  width: 100%;
+}
+.description {
+  font-family: "Satoshi-Medium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 27px;
+  color: #0F0F0F;
+}
+:host >>> br {
+  display: none;
+}
+:host >>> h1 {
+  display: none;
+}
+@media screen and (max-width: 400px) {
+  :host >>> br {
+    display: block;
+  }
+}
+@media screen and (max-width: 310px) {
+  :host >>> br {
+    display: none;
+  }
+}
+@media screen and (max-width: 1130px) {
+  :host >>> h1 {
+    display: block;
+  }
+  .upBlock {
+    width: 87%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 32px;
+    flex-direction: column;
+  }
+  .rightBlock {
+    margin-top: 16px;
+    width: 100%;
+    padding-left: 0;
+  }
+  .firstTitle {
+    margin-bottom: 16px;
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .secondTitle {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .description {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .img {
+    margin-top: 0px;
+  }
+  .content {
+    margin-top: 0px;
+  }
+}

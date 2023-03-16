@@ -1,0 +1,110 @@
+<div class="layout">
+  <div class="marginDiv"></div>
+  <h2
+    class="title"
+    [innerHTML]="vm.header | safeHtml"
+    data-aos="fade-up"
+    data-aos-delay="200"
+    data-aos-easing="ease"
+    data-aos-duration="400"
+  ></h2>
+  <div class="contentLineH"></div>
+  <div class="content">
+    <div
+      class="btn-block"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    >
+      <buttonBottomBorderGreenWithArrow
+        [contentText]="vm.btnName"
+      ></buttonBottomBorderGreenWithArrow>
+    </div>
+    <div class="contentLineW"></div>
+    <div class="blok2">
+      <div *ngFor="let item of vm.content; let i = index">
+        <a [href]="item.link" *ngIf="i % 2 == 0" class="contentBlockLeft">
+          <div
+            class="contentTitle"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-easing="ease"
+            data-aos-duration="400"
+          >
+            <div [innerHTML]="item.title | safeHtml"></div>
+            <div class="arrow">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M11.3005 1.58129H0.559067V0H14V13.441H12.4187V2.69943L1.11813 14L0 12.8819L11.3005 1.58129Z"
+                  class="arrow-path"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="contentLineH"></div>
+          <div
+            class="contentDiv"
+            [innerHTML]="item.firstParagraph | safeHtml"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          ></div>
+        </a>
+        <a [href]="item.link" *ngIf="i % 2 != 0" class="contentBlockRight">
+          <div class="contentTitle">
+            <div
+              [innerHTML]="item.title | safeHtml"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="ease"
+              data-aos-duration="400"
+            ></div>
+            <div class="arrow">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M11.3005 1.58129H0.559067V0H14V13.441H12.4187V2.69943L1.11813 14L0 12.8819L11.3005 1.58129Z"
+                  class="arrow-path"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="contentLineH"></div>
+          <div
+            class="contentDiv"
+            [innerHTML]="item.firstParagraph | safeHtml"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-easing="ease"
+            data-aos-duration="400"
+          ></div>
+          <div *ngIf="i == vm.content.length - 2" class="roundBlock">
+            <div
+              class="round"
+              data-aos="fade-left"
+              data-aos-delay="200"
+              data-aos-easing="ease"
+              data-aos-duration="400"
+            ></div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="contentLineRight"></div>
+  </div>
+</div>

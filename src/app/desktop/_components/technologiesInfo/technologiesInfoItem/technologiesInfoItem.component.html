@@ -1,0 +1,29 @@
+<div class="layout">
+  <a [href]="vm.link" class="content">
+    <div
+      class="icon"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    >
+      <img [src]="vm.imageUrl" alt="tech icon" />
+    </div>
+    <h2
+      class="title"
+      [innerHTML]="vm.title | safeHtml"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    ></h2>
+    <p
+      class="description"
+      [innerHTML]="vm.description | safeHtml"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    ></p>
+  </a>
+</div>

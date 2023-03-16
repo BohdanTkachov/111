@@ -1,0 +1,82 @@
+<div class="layout">
+  <div class="content">
+    <div class="left">
+      <div
+        class="title"
+        [innerHTML]="vm.title | safeHtml"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      ></div>
+      <div
+        class="icon"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      >
+        <img [src]="vm.iconUrl" alt="company icon" />
+      </div>
+      <div
+        class="description"
+        [innerHTML]="vm.description | safeHtml"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      ></div>
+      <div
+        class="client"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      >
+        <span>Client</span>
+        <span [innerHTML]="vm.client | safeHtml"></span>
+      </div>
+      <div
+        class="industry"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      >
+        <span>Industry</span>
+        <span [innerHTML]="vm.industry | safeHtml"></span>
+      </div>
+      <div
+        class="employees"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      >
+        <span>Employers</span>
+        <span [innerHTML]="vm.employers.toString() | safeHtml"></span>
+      </div>
+      <div
+        class="link"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      >
+        <a [href]="vm.link" class="btn-content">
+          <span>See this case</span>
+          <img src="../../../../assets/Images/arrowTR.svg" alt="arrow" />
+        </a>
+      </div>
+    </div>
+    <div
+      class="right"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    >
+      <img [src]="vm.imageUrl" alt="image" />
+    </div>
+  </div>
+</div>

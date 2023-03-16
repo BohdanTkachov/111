@@ -1,0 +1,29 @@
+<div class="layout">
+  <div class="content">
+    <div class="left-part">
+      <h1 class="company-name">111 minutes</h1>
+      <h2 class="section-name" [innerHTML]="vm.title"></h2>
+      <div class="content-container">
+        <div class="content-item-left" *ngFor="let item of vm.content">
+          <a
+            [href]="item.link"
+            [innerHTML]="item.title"
+            class="selection-left-link"
+          ></a>
+        </div>
+      </div>
+    </div>
+    <div class="horizontal-line"></div>
+    <div class="right-part">
+      <div class="content-a" *ngFor="let item of vm.content">
+        <a [href]="item.link" class="content-item-right">
+          <img [src]="item.imageUri" class="img" />
+          <p class="description" [innerHTML]="item.description">
+          </p>
+          <p class="title-item selection-left-link"><b [innerHTML]="item.title"></b></p>
+        </a>
+        <div class="horizontal-line"></div>
+      </div>
+    </div>
+  </div>
+</div>

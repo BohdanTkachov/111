@@ -1,0 +1,87 @@
+.layout {
+  width: 87%;
+  margin: auto;
+}
+.content {
+  margin-top: 100px;
+}
+.upBlock {
+  display: flex;
+  justify-content: space-between;
+}
+.img {
+  margin-top: 24px;
+  width: 100%;
+}
+.title {
+  color: #111D19;
+  width: 30%;
+  font-family: "Satoshi-Black";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 61px;
+  text-transform: uppercase;
+}
+.description {
+  color: #0f0f0f;
+  width: 55%;
+  font-family: "Satoshi-Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 27px;
+}
+
+.description >>> p{
+  margin-top: 0;
+}
+
+@media screen and (max-width: 1350px) {
+  :host >>> br {
+    display: none;
+  }
+}
+@media screen and (max-width: 1130px) {
+
+  .layout{
+    width: 100%;
+  }
+  .title {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 24px;
+
+    margin-bottom: 16px;
+  }
+  .description {
+    width: 100%;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  :host >>> span {
+    color: #0f0f0f;
+  }
+  .img {
+    max-width: 512px;
+    margin: auto;
+    
+    margin-top: 20px;
+  }
+  .content {
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .upBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 87%;
+    margin: auto;
+  }
+}

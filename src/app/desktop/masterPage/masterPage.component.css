@@ -1,0 +1,12 @@
+.error-layout {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 600px;
+}
+
+.error-message {
+	color: #cc0000cc;
+	font-size: 2.1em;
+	font-weight: bold;
+}

@@ -1,0 +1,51 @@
+/*
+.shareDetailsInfoBlock {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.layout {
+    background-color: white;
+
+    max-width: 1440px;
+    margin: auto;
+}
+
+.greetingWithTextBlock {
+    margin-bottom: 70px;
+}
+
+.whyDelegateInfoBlock {
+    margin: 100px;
+}
+
+.provideInfoBlock {
+    background-color: #111D19;
+}
+
+.contactusBlock {
+    margin-top: 200px;
+    padding-bottom: 200px;
+}
+
+@media screen and (max-width: 1130px) {
+    .shareDetailsInfoBlock {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .whyDelegateInfoBlock {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .contactusBlock {
+        margin-top: 100px;
+        padding-bottom: 0px;
+    }
+}
+*/

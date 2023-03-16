@@ -1,0 +1,14 @@
+<div class="layout">
+  <div class="content">
+    <h2 class="title" [innerHTML]="vm.header | safeHtml" data-aos="fade-up" 
+    data-aos-delay="200"
+    data-aos-easing="ease"
+    data-aos-duration="400"></h2>
+    <div class="content-container">
+      <div class="content-item" *ngFor="let contentItem of array; let i = index">
+        <technologiesInfoItem [vm]="vm.content[i/2]" *ngIf="i % 2 == 0"></technologiesInfoItem>
+        <div class="vertical-row" *ngIf="i % 2 == 1"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="main-container">
+  <div class="content-container">
+    <div class="header-container">
+      <div
+        class="header"
+        [innerHTML]="vm.header | safeHtml"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      ></div>
+
+      <img
+        class="image"
+        src="../../../../assets/Images/ArrowDown.svg"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      />
+    </div>
+
+    <div class="items-container">
+      <div
+        class="item-container"
+        *ngFor="let item of vm.content; let i = index"
+      >
+        <div class="number-title-container">
+          <div
+            class="number-item"
+            [innerHTML]="getNumberInString(i + 1) | safeHtml"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-easing="ease"
+            data-aos-duration="400"
+          ></div>
+          <div
+            class="title-item"
+            [innerHTML]="item.title | safeHtml"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-easing="ease"
+            data-aos-duration="400"
+          ></div>
+        </div>
+
+        <div class="line-item"></div>
+        <div
+          class="description-item"
+          [innerHTML]="item.description"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-easing="ease"
+          data-aos-duration="400"
+        ></div>
+      </div>
+    </div>
+  </div>
+</div>

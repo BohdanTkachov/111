@@ -1,0 +1,66 @@
+.content {
+    width: 87%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-family: 'Satoshi-Black';
+    font-size: 32px;
+    line-height: 43px;
+    color: #183028;
+    text-transform: uppercase;
+
+    width: 50%;
+
+    margin: 0;
+    margin-bottom: 106px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.vertical-row {
+    width: 1px;
+    height: 100%;
+
+    background-color: #DCDCDC;
+}
+
+.content-item {
+    display: flex;
+    flex-direction: row;
+
+    max-width: 24%;
+}
+
+@media screen and (max-width: 1130px) {
+    .title {
+        font-size: 16px;
+        line-height: 24px;
+
+        width: 100%;
+
+        margin-bottom: 32px;
+    }
+
+    .content-container {
+        flex-direction: column;
+    }
+
+    .content-item {
+        max-width: 100%;
+
+        margin-top: 32px;
+        margin-top: 32px;
+    }
+
+    .vertical-row {
+        height: 1px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,146 @@
+.layout {
+    background-color: #0F0F0F;
+    color: white;
+    padding: 40px;
+    min-height: 550px;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.right {
+    width: 59.5%;
+}
+
+.right>img {
+    width: 100%;
+}
+
+.left {
+    width: 33%;
+    height: 100%;
+    padding: 40px;
+    background-color: #111D19;
+}
+
+.title {
+    font-family: 'Satoshi-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+.icon {
+    margin-bottom: 25px;
+    width: 40%;
+}
+
+
+
+.description {
+    font-family: 'Satoshi-Medium', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #C7CACB;
+    width: 84%;
+    margin-bottom: 32px;
+}
+
+.client, .industry, .employees {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    font-family: 'Satoshi-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.link {
+    margin-top: 29px;
+}
+
+.btn-content {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    width: fit-content;
+
+    background-color: #193028;
+    border: none;
+
+    border-bottom: 2px solid #38bc64;
+
+    text-decoration: none;
+
+    padding: 12px 40px;
+
+    cursor: pointer;
+
+    font-family: 'Satoshi-Bold', sans-serif;
+    font-weight: 700;
+    line-height: 21px;
+    font-size: 14px;
+    color: white;
+}
+
+.btn-content>img {
+    margin-left: 14px;
+
+    width: 14px;
+}
+
+@media screen and (max-width: 1130px) {
+    .content {
+        flex-direction: column;
+        width: 100%;
+        padding: 4px;
+        justify-content: center;
+    }
+
+    .layout {
+        width: 100%;
+        padding: 0;
+    }
+
+    .left {
+        width: calc(100% - 28px);
+        margin-bottom: 8px;
+        padding: 12px;
+        padding-bottom: 40px;
+    }
+
+    .link {
+        width: fit-content;
+        margin: auto;
+        margin-top: 24px;
+    }
+
+    .right {
+        width: 97.5%;
+    }
+
+    .description{
+        width: 100%;
+    }
+
+    .client, .industry, .employees {
+        font-size: 14px;
+        font-weight: 21px;
+
+        border-top: 1px dashed rgba(255, 255, 255, 0.4);
+    }
+}

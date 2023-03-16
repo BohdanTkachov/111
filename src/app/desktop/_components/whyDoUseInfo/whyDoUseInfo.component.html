@@ -1,0 +1,177 @@
+<div class="layout">
+  <div class="main-container">
+    <div class="pre-header" data-aos="fade-up" data-aos-delay="300">
+      Our advantages
+    </div>
+
+    <div
+      class="header"
+      [innerHtml]="vm.header | safeHtml"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    ></div>
+
+    <div class="realative-container">
+      <div class="content-container">
+        <div class="one-content-column">
+          <div class="top-left-content">
+            <img
+              class="image"
+              src="../../../../assets/Images/CheckIcon.svg"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="ease"
+              data-aos-duration="400"
+            />
+            <div
+              class="title"
+              [innerHtml]="vm.content[0].title | safeHtml"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="ease"
+              data-aos-duration="400"
+            ></div>
+            <p
+              class="description"
+              [innerHtml]="vm.content[0].description | safeHtml"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="ease"
+              data-aos-duration="400"
+            ></p>
+          </div>
+
+          <div class="top-right-content">
+            <img
+              class="image"
+              src="../../../../assets/Images/CheckIcon.svg"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="ease"
+              data-aos-duration="400"
+            />
+            <div
+              class="title"
+              [innerHtml]="vm.content[1].title | safeHtml"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="ease"
+              data-aos-duration="400"
+            ></div>
+            <p
+              class="description"
+              [innerHtml]="vm.content[1].description | safeHtml"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="ease"
+              data-aos-duration="400"
+            ></p>
+          </div>
+        </div>
+
+        <div class="two-content-colomn">
+          <div class="bottom-left-content">
+            <img
+              class="image"
+              src="../../../../assets/Images/CheckIcon.svg"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="ease"
+              data-aos-duration="400"
+            />
+            <div
+              class="title"
+              [innerHtml]="vm.content[2].title | safeHtml"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="ease"
+              data-aos-duration="400"
+            ></div>
+            <p
+              class="description"
+              [innerHtml]="vm.content[2].description | safeHtml"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="ease"
+              data-aos-duration="400"
+            ></p>
+          </div>
+
+          <div class="bottom-right-content">
+            <img
+              class="image"
+              src="../../../../assets/Images/CheckIcon.svg"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="ease"
+              data-aos-duration="400"
+            />
+            <div
+              class="title"
+              [innerHtml]="vm.content[3].title | safeHtml"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="ease"
+              data-aos-duration="400"
+            ></div>
+            <p
+              class="description"
+              [innerHtml]="vm.content[3].description | safeHtml"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="ease"
+              data-aos-duration="400"
+            ></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="across-container">
+        <div class="arrow-right-conatiner">
+          <div class="line-left-container">
+            <div class="line-left-content-container">
+              <div
+                class="across-text-left"
+                [innerHtml]="vm.acrossModel.leftText | safeHtml"
+              >
+                left
+              </div>
+
+              <div class="line-left"></div>
+
+              <div
+                class="across-text-right"
+                [innerHtml]="vm.acrossModel.rightText | safeHtml"
+              >
+                right
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="arrow-top-conatiner">
+          <div class="line-top"></div>
+          <div
+            class="across-text-bottom"
+            [innerHtml]="vm.acrossModel.bottomText | safeHtml"
+          >
+            bottom
+          </div>
+
+          <div class="arrow arrow-top">
+            <span class="arrow-4-left"></span>
+            <span class="arrow-4-right"></span>
+          </div>
+          <div
+            class="across-text-top"
+            [innerHtml]="vm.acrossModel.topText | safeHtml"
+          >
+            top
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

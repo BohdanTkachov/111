@@ -1,0 +1,41 @@
+<div class="layout">
+  <div class="content">
+    <div class="header-container">
+      <h3
+        class="header"
+        [innerHTML]="vm.header | safeHtml"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      ></h3>
+      <div class="arrows">
+        <!-- Prev -->
+        <div
+          (click)="prevCase()"
+          class="arrow arrow-left"
+          data-aos="fade-left"
+          data-aos-delay="200"
+          data-aos-easing="ease"
+          data-aos-duration="400"
+        >
+          <img src="../../../../assets/Images/ArrowLeft.svg" alt="arrow" />
+        </div>
+        <!-- Next -->
+        <div
+          (click)="nextCase()"
+          class="arrow arrow-right"
+          data-aos="fade-left"
+          data-aos-delay="200"
+          data-aos-easing="ease"
+          data-aos-duration="400"
+        >
+          <img src="../../../../assets/Images/ArrowLeft.svg" alt="arrow" />
+        </div>
+      </div>
+    </div>
+    <div class="case">
+      <ourProjectInfo [vm]="vm.content[currantCaseIndex]"></ourProjectInfo>
+    </div>
+  </div>
+</div>

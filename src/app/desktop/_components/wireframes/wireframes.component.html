@@ -1,0 +1,23 @@
+<div class="layout">
+  <div class="content">
+    <div
+      class="leftBlock"
+      data-aos="fade-right"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    >
+      <div class="title" [innerHtml]="vm.title | safeHtml"></div>
+      <div class="description" [innerHtml]="vm.description | safeHtml"></div>
+    </div>
+    <div
+      class="rightBlock"
+      data-aos="fade-left"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    >
+      <img class="img" [src]="vm.imgUrl" />
+    </div>
+  </div>
+</div>

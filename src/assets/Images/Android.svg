@@ -1,0 +1,13 @@
+<svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect opacity="0.5" x="0.5" y="0.5" width="101" height="101" rx="50.5" fill="#38BC64" fill-opacity="0.5" stroke="#38BC64"/>
+<path d="M39.3516 44.711C39.3516 38.0524 44.7494 32.6545 51.408 32.6545C58.0667 32.6545 63.4645 38.0524 63.4645 44.711V63.2077C63.4645 65.0591 61.9637 66.5599 60.1124 66.5599H42.7037C40.8524 66.5599 39.3516 65.0591 39.3516 63.2077V44.711Z" stroke="white" stroke-width="2"/>
+<rect opacity="0.5" x="66.0977" y="44.7109" width="2.7201" height="14.1445" rx="1.36005" fill="white"/>
+<rect opacity="0.5" x="34" y="44.7109" width="2.7201" height="14.1445" rx="1.36005" fill="white"/>
+<rect opacity="0.5" x="42.707" y="30.6321" width="3.26412" height="5.28936" rx="1.63206" transform="rotate(-30 42.707 30.6321)" fill="white"/>
+<rect opacity="0.5" x="44" y="40" width="3" height="3" rx="1.5" transform="rotate(-30 44 40)" fill="white"/>
+<rect opacity="0.5" x="54.7305" y="40" width="3" height="3" rx="1.5" transform="rotate(-30 54.7305 40)" fill="white"/>
+<rect opacity="0.5" width="3.26412" height="5.28936" rx="1.63206" transform="matrix(-0.866025 -0.5 -0.5 0.866025 60.4219 30.6321)" fill="white"/>
+<rect opacity="0.5" width="3.26412" height="6.5282" rx="1.63206" transform="matrix(1 0 0 -1 56.8516 73)" fill="white"/>
+<rect opacity="0.5" x="42.707" y="66.4717" width="3.26412" height="6.5282" rx="1.63206" fill="white"/>
+<line opacity="0.4" x1="39.4414" y1="45.4087" x2="64.4663" y2="45.4087" stroke="white" stroke-width="2"/>
+</svg>

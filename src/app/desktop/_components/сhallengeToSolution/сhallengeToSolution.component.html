@@ -1,0 +1,53 @@
+<div class="layout">
+  <div class="container">
+    <div
+      class="top-wrapper"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    >
+      <h2>Challenge</h2>
+      <img
+        src="../../../../assets/Images/arrowRight.svg"
+        alt="ArrowRight"
+        class="arrow"
+      />
+      <h2>Solution</h2>
+    </div>
+    <div class="bottom-wrapper">
+      <div
+        class="col col-1"
+        data-aos="fade-right"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      >
+        <h3 class="desktop-hidden">CHALLENGE</h3>
+        <div
+          class="challenge-description"
+          [innerHtml]="vm.challengeDescription | safeHtml"
+        ></div>
+      </div>
+      <div
+        class="col col-2"
+        data-aos="fade-left"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      >
+        <h3 class="desktop-hidden">SOLUTION</h3>
+        <div
+          class="solution-description"
+          [innerHtml]="vm.solutionDescription | safeHtml"
+        ></div>
+        <h4>SERVICES:</h4>
+        <div class="services-wrapper">
+          <div class="service-container" *ngFor="let service of vm.services">
+            <div class="service" [innerHtml]="service"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

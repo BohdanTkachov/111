@@ -1,0 +1,40 @@
+<div class="layout">
+  <div class="content">
+    <h4
+      class="titleUp"
+      [innerHTML]="vm.header | safeHtml"
+      data-aos="fade-up-left"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    ></h4>
+
+    <h2
+      class="title"
+      [innerHTML]="vm.title | safeHtml"
+      data-aos="fade-up-right"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    ></h2>
+
+    <p
+      class="description"
+      [innerHTML]="vm.description | safeHtml"
+      data-aos="fade-up-left"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    ></p>
+
+    <div
+      class="btn-container"
+      data-aos="fade-up-right"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    >
+      <buttonGreen contentText="Book a call"></buttonGreen>
+    </div>
+  </div>
+</div>

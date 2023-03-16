@@ -1,0 +1,35 @@
+<div class="layout">
+  <div class="content-container" [class.mb]="isMainPage">
+    <div class="content">
+      <h2
+        class="header"
+        [innerHTML]="vm.headerText"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      ></h2>
+      <div class="children" 
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400">
+        <div
+          class="child"
+          *ngFor="let item of getChildrenArr(); let index = index"
+        >
+          <ng-container *ngIf="index % 2 == 0; else elseTemplate">
+            <whatIsChild
+              [vm]="vm.children[index / 2]"
+              [id]="index"
+              class="child-container"
+            ></whatIsChild>
+          </ng-container>
+          <ng-template #elseTemplate>
+            <div class="vertical-line"></div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

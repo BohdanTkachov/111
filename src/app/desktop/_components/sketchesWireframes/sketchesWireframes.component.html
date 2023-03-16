@@ -1,0 +1,41 @@
+<div class="layout">
+  <div class="content">
+    <div class="upBlock">
+      <div
+        class="leftBlock"
+        data-aos="fade-right"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      >
+        <div class="firstTitle" [innerHTML]="vm.firstTitle | safeHtml"></div>
+        <div class="secondTitle" [innerHTML]="vm.secondTitle | safeHtml"></div>
+      </div>
+      <div
+        class="rightBlock"
+        data-aos="fade-left"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      >
+        <div
+          class="description1 description"
+          [innerHTML]="vm.description1 | safeHtml"
+        ></div>
+        <div
+          class="description2 description"
+          [innerHTML]="vm.description2 | safeHtml"
+        ></div>
+      </div>
+    </div>
+    <img
+      alt="img"
+      class="img"
+      [src]="GetUrl()"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    />
+  </div>
+</div>

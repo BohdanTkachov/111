@@ -1,0 +1,18 @@
+<div class="layout">
+  <div
+    class="content"
+    data-aos="fade-up"
+    data-aos-delay="200"
+    data-aos-easing="ease"
+    data-aos-duration="400"
+  >
+    <h3 class="title" [innerHTML]="vm.title | safeHtml"></h3>
+    <p class="description" [innerHTML]="vm.description | safeHtml"></p>
+    <p
+      class="uppercase-description"
+      [innerHTML]="vm.uppercaseText | safeHtml"
+      *ngIf="vm.uppercaseText != ''"
+    ></p>
+    <img [src]="vm.imageUri" alt="img" class="img" />
+  </div>
+</div>

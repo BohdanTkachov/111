@@ -1,0 +1,14 @@
+<div class="page-layout" style="min-height: 600px" *ngIf="!vm.HasError()">
+  <div class="page-content">
+    <div class="page-content-block" *ngFor="let block of vm.blocks" [style.background]="block.backgroundColor"
+      [style.padding-bottom]="GetPadding(block)">
+      <masterPageBlock [vm]="block"></masterPageBlock>
+    </div>
+  </div>
+
+  <!-- <button (click)="openModal()">Open modal</button> -->
+</div>
+
+<div class="error-layout" *ngIf="vm.HasError()">
+  <div class="error-message" *ngFor="let error of vm.errors">{{ error }}</div>
+</div>

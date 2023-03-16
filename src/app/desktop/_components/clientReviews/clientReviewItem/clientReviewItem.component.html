@@ -1,0 +1,82 @@
+<div class="layout">
+  <div class="content">
+    <div class="left">
+      <div
+        class="review-description"
+        [innerHTML]="vm.reviewDescription | safeHtml"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      ></div>
+      <div
+        class="become-a-client-button"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      >
+        <buttonBottomBorderGreenWithArrow
+          contentText="BECOME A CLIENT"
+        ></buttonBottomBorderGreenWithArrow>
+      </div>
+    </div>
+    <div class="right">
+      <div class="top-part">
+        <div
+          class="coma coma-left"
+          data-aos="fade-left"
+          data-aos-delay="200"
+          data-aos-easing="ease"
+          data-aos-duration="400"
+        >
+          ,,
+        </div>
+        <div
+          class="description"
+          [innerHTML]="vm.description | safeHtml"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        ></div>
+        <div
+          class="coma coma-right"
+          data-aos="fade-left"
+          data-aos-delay="200"
+          data-aos-easing="ease"
+          data-aos-duration="400"
+        >
+          ,,
+        </div>
+      </div>
+      <div class="bottom-part">
+        <div
+          class="client-img"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-easing="ease"
+          data-aos-duration="400"
+        >
+          <img [src]="vm.clientImageUri" alt="clientImage" />
+        </div>
+        <div class="client-info">
+          <div
+            class="client-name"
+            [innerHTML]="vm.clientName | safeHtml"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-easing="ease"
+            data-aos-duration="400"
+          ></div>
+          <div
+            class="client-company"
+            [innerHTML]="vm.clientCompany | safeHtml"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-easing="ease"
+            data-aos-duration="400"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

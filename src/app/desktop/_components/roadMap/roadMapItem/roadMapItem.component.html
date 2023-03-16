@@ -1,0 +1,42 @@
+<div class="layout">
+  <div class="container">
+    <div
+      class="top-wrapper"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    >
+      <div class="header-wrapper">
+        <p class="index" [innerHtml]="index | number : '2.0-0'"></p>
+        <h2 [innerHtml]="vm.header | safeHtml"></h2>
+      </div>
+      <img [src]="vm.icon" alt="Icon" class="icon" />
+    </div>
+    <div
+      class="bottom-wrapper"
+      data-aos="fade-left"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    >
+      <div class="col col-1">
+        <img [src]="vm.img" alt="Phone" class="phone" />
+        <img
+          src="../../../../../assets/Images/zoom.svg"
+          (click)="openModal()"
+          alt="Zoom-in"
+          class="zoom"
+        />
+      </div>
+      <div class="col col-2">
+        <div class="description-block description-block-1">
+          <p class="description-p" [innerHtml]="vm.description1 | safeHtml"></p>
+        </div>
+        <div class="description-block description-block-2">
+          <p class="description-p" [innerHtml]="vm.description2 | safeHtml"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

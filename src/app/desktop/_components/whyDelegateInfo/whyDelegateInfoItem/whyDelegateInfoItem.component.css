@@ -1,0 +1,59 @@
+.layout {
+  background-color: #f8f7f2;
+  padding: 49px 40px;
+  min-height: 300px;
+  display: flex;
+  height: calc(100% - 98px);
+}
+
+.item-container{
+  height: fit-content;
+}
+
+.icon {
+  width: 66px;
+  padding-bottom: 24px;
+}
+
+.itemTitle {
+  font-family: "Satoshi-Bold", sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.itemDescription {
+  font-family: "Satoshi-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #111D19;
+}
+
+@media screen and (max-width: 1130px) {
+  :host {
+    width: 100%;
+  }
+
+  .layout {
+    padding: 16px 12px;
+    min-height: 258px;
+    height: auto;
+  }
+
+  .icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .itemTitle {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .itemDescription {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

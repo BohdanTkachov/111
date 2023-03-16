@@ -1,0 +1,45 @@
+<div class="layout">
+  <div class="content">
+    <div class="header-container">
+      <h3
+        class="header"
+        [innerHTML]="vm.header | safeHtml"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      ></h3>
+      <div class="arrows" *ngIf="vm.content.length > 1">
+        <div
+          class="arrow arrow-left"
+          (click)="prevReview()"
+          data-aos="fade-left"
+          data-aos-delay="200"
+          data-aos-easing="ease"
+          data-aos-duration="400"
+        >
+          <img src="../../../../assets/Images/ArrowLeft.svg" alt="arrow" />
+        </div>
+        <div
+          class="arrow arrow-right"
+          (click)="nextReview()"
+          data-aos="fade-left"
+          data-aos-delay="200"
+          data-aos-easing="ease"
+          data-aos-duration="400"
+        >
+          <img src="../../../../assets/Images/ArrowLeft.svg" alt="arrow" />
+        </div>
+      </div>
+    </div>
+    <div
+      class="review-comtainer"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    >
+      <clientReviewItem [vm]="vm.content[index]"></clientReviewItem>
+    </div>
+  </div>
+</div>

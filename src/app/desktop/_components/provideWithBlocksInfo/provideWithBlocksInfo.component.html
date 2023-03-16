@@ -1,0 +1,41 @@
+<div class="layout">
+  <div class="content">
+    <div class="left">
+      <h3
+        class="header"
+        [innerHTML]="vm.header | safeHtml"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      ></h3>
+
+      <img
+        class="imgCustomDev"
+        *ngIf="vm.imageUri.includes('CustomDevelopmentPageImages')"
+        [src]="vm.imageUri"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      />
+
+      <img
+        class="img"
+        *ngIf="!vm.imageUri.includes('CustomDevelopmentPageImages')"
+        [src]="vm.imageUri"
+        alt="image"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      />
+    </div>
+
+    <div class="right">
+      <div class="contentItemContainer" *ngFor="let item of vm.content">
+        <provideWithBlocksInfoItem [vm]="item"></provideWithBlocksInfoItem>
+      </div>
+    </div>
+  </div>
+</div>

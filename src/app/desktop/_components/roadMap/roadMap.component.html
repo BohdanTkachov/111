@@ -1,0 +1,32 @@
+<div class="layout">
+  <div class="container">
+    <p class="title" [innerHtml]="vm.title" 
+    data-aos="fade-up"
+    data-aos-delay="200"
+    data-aos-easing="ease"
+    data-aos-duration="400"></p>
+    <div class="items-wrapper">
+      <div
+        class="item-container"
+        *ngFor="let item of vm.content; let i = index"
+      >
+        <roadMapItem
+          [vm]="item"
+          [index]="i + 1"
+          (onOpenModal)="onOpenModal()"          
+          data-aos="fade-left"
+          data-aos-delay="200"
+          data-aos-easing="ease"
+          data-aos-duration="400"
+        ></roadMapItem>
+      </div>
+    </div>
+  </div>
+  <modalCaseHeader
+    class="modal"
+    (onOpenModal)="onOpenModal()"
+    (onClouseModal)="onCloseModal()"
+    [vm]="vm.modal"
+    *ngIf="isModalDialogVisible"
+  ></modalCaseHeader>
+</div>

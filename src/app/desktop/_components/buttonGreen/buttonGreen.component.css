@@ -1,0 +1,30 @@
+.btn-content {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+
+
+  font-family: "Satoshi-Medium",sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+
+  border: none;
+  height: 56px;
+
+  padding-left: 44px;
+  padding-right: 44px;
+
+  cursor: pointer;
+
+  background-color: #193028;
+  border-bottom: 2px solid #38bc64;
+}
+
+@media screen and (max-width: 1130px) {
+  .btn-content{
+    height: 48px;
+  }
+}

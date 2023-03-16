@@ -1,0 +1,154 @@
+.content {
+  margin-top: 88px;
+}
+
+.firstTitle {
+  color: #4F4F4F;
+  text-transform: uppercase;
+  margin-bottom: 23px;
+  font-family: "Satoshi-Bold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: #4f4f4f;
+}
+
+.secondTitle {
+  color: #111D19;
+  text-transform: uppercase;
+  font-family: "Satoshi-Black", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 61px;
+}
+
+.upBlock {
+  width: 87%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.leftBlock {
+  width: 25%;
+}
+
+.rightBlock {
+  margin-top: 70px;
+  width: 74%;
+  padding-left: 72px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.img {
+  margin-top: 64px;
+  width: 100%;
+}
+
+.description {
+  font-family: "Satoshi-Medium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 27px;
+  color: #0F0F0F;
+}
+
+.description1 {
+  width: 45%;
+}
+
+.description2{
+  width: 50%;
+}
+
+.secondTitle>>>br {
+  display: block;
+}
+
+.description >>> br{
+  display: block;
+}
+
+:host>>>h1 {
+  display: none;
+}
+
+@media screen and (max-width: 1280px) {
+  .description >>> br{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  :host>>>br {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  :host>>>br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  :host>>>h1 {
+    display: block;
+  }
+
+  .leftBlock{
+    width: auto;
+  }
+
+  .secondTitle>>>br {
+    display: none;
+  }
+
+  .upBlock {
+    width: 87%;
+    margin: auto;
+    flex-direction: column;
+  }
+
+  .rightBlock {
+    margin-top: 16px;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .firstTitle {
+    margin-bottom: 16px;
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .secondTitle {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 24px;
+
+    width: 100%;
+  }
+
+  .description {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+
+    width: auto;
+  }
+
+  .img {
+    margin-top: 0px;
+  }
+
+  .content {
+    margin-top: 0px;
+  }
+}

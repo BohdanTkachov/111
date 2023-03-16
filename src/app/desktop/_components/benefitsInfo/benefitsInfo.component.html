@@ -1,0 +1,55 @@
+<div class="layout">
+  <div class="content">
+    <div class="upBlock">
+      <div
+        class="title"
+        [innerHTML]="vm.Title | safeHtml"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      ></div>
+      <div
+        class="description"
+        [innerHTML]="vm.Header | safeHtml"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      ></div>
+    </div>
+
+    <div class="contentBlock">
+      <div class="block" *ngFor="let item of vm.Content">
+        <img
+          class="img"
+          src="../../../../assets/Images/CheckIcon.svg"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-easing="ease"
+          data-aos-duration="400"
+        />
+
+        <div class="infoBlock">
+          <div
+            class="titleBlock"
+            [innerHTML]="item.Title | safeHtml"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-easing="ease"
+            data-aos-duration="400"
+          ></div>
+
+          <div
+            class="descriptionBlock"
+            [innerHTML]="item.Description | safeHtml"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-easing="ease"
+            data-aos-duration="400"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

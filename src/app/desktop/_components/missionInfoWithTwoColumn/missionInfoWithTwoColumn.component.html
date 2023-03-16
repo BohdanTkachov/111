@@ -1,0 +1,20 @@
+<div class="layout">
+  <div class="content">
+    <h2
+      class="title"
+      [innerHTML]="vm.title | safeHtml"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    ></h2>
+    <div class="items-container">
+      <div *ngFor="let child of vm.children" class="item">
+        <missionInfoWithTwoColumnItem
+          [vm]="child"
+        ></missionInfoWithTwoColumnItem>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="layout">
+  <div class="content">
+    <div class="left-part">
+      <h1 class="company-name">111 minutes</h1>
+      <h2 class="section-name" [innerHTML]="vm.title"></h2>
+      <div class="content-container">
+        <div class="content-item-left" *ngFor="let item of vm.content">
+          <a
+            [href]="item.link"
+            [innerHTML]="item.title | safeHtml"
+            class="selection-left-link"
+          ></a>
+        </div>
+        <div class="content-item-left" *ngIf="vm.content.length>3">
+          <a
+            [href]="'#'"
+            [innerHTML]="'See all'"
+            class="selection-left-link seeAll"
+          ></a>
+        </div>
+      </div>
+    </div>
+    <div class="horizontal-line"></div>
+    <div class="right-part">
+      <a
+        [href]="item.link"
+        *ngFor="let item of vm.content.slice(0,4)"
+        class="content-item-right colorGreen"
+      >
+        <img
+          [src]="item.imageUri"
+          alt="image"
+          class="item-image"
+        />
+        <div
+          class="title"
+        >
+          <span [innerHTML]="item.title"></span>
+          <div class="arrow">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.3005 1.58129H0.559067V0H14V13.441H12.4187V2.69943L1.11813 14L0 12.8819L11.3005 1.58129Z"
+                class="arrow-path"
+              />
+            </svg>
+          </div>
+        </div>
+        <div [innerHTML]="item.description" class="description"></div>
+      </a>
+      <buttonGreen *ngIf="vm.content.length>3" class="btn" [contentText]="'SEE ALL ARTICLES'"></buttonGreen>
+    </div>
+  </div>
+</div>

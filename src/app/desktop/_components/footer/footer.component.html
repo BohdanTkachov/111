@@ -1,0 +1,85 @@
+<div class="layout">
+  <div class="content">
+    <!-- <div class="container"> -->
+    <div class="wrapper-top">
+      <div class="contacts">
+        <h2 data-aos="fade-up" data-aos-delay="300">111 Minutes</h2>
+
+        <div class="text">
+          <div
+            [innerHTML]="vm.contacts.description | safeHtml"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          ></div>
+
+          <a
+            class="contact"
+            [innerHTML]="'Tel: ' + vm.contacts.phone | safeHtml"
+            href="tel: {{ vm.contacts.phone.replaceAll(' ', '') }}"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          ></a>
+
+          <br />
+
+          <a
+            class="contact"
+            [innerHTML]="'Email: ' + vm.contacts.mail | safeHtml"
+            href="mailto: {{ vm.contacts.mail }}"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          ></a>
+        </div>
+
+        <div class="contact-us" data-aos="fade-up" data-aos-delay="600">
+          <buttonGreen [contentText]="vm.contacts.btnName"></buttonGreen>
+        </div>
+      </div>
+
+      <div class="blocks-wrapper">
+        <div class="block" *ngFor="let item of sortArrayByIndex(vm.chapters)">
+          <h3
+            [innerHTML]="item.title | safeHtml"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          ></h3>
+          <div class="block-content" data-aos="fade-up" data-aos-delay="400">
+            <ul>
+              <li *ngFor="let chapter of item.chapterItem; let i = index">
+                <a
+                  class="footer-link"
+                  [class.first-media-item]="i == 0"
+                  [href]="chapter.link"
+                  [innerHTML]="chapter.title | safeHtml"
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="block empty-block"></div>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+  <div class="bottom-hr"></div>
+  <div class="wrapper-bottom">
+    <div class="name">© 111 Minutes 2007 - 2023</div>
+
+    <div class="media-wrapper">
+      <div class="media-title">Social networks</div>
+
+      <div class="media-block">
+        <a
+          target="_blank"
+          [href]="item.link"
+          *ngFor="let item of vm.socialNetworks"
+        >
+          <div class="media-item first-media-item">
+            <img class="media-img" [src]="item.iconPath" [alt]="item.title" />
+            <div class="media-name" [innerHTML]="item.title | safeHtml"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

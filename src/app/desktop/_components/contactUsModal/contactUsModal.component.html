@@ -1,0 +1,169 @@
+<!-- Modal -->
+<div id="modal" class="hidden modal">
+  <form (submit)="send()" [formGroup]="form">
+    <div class="layout">
+      <div class="wrapper">
+        <div class="header">
+          <img
+            [src]="vm.logoImgUri"
+            [alt]="vm.logoImgUri"
+            class="logo"
+          />
+          <button
+            class="close-btn-mobile desktop-hidden"
+            (click)="close()"
+            type="reset"
+          >
+            <img src="../../../../assets/Images/x-close.svg" alt="close img" />
+          </button>
+        </div>
+
+        <div class="content">
+          <div class="wrapper-top">
+            <div class="title" [innerHTML]="vm.header"></div>
+            <button
+              class="close-btn-desktop mobile-hidden"
+              (click)="close()"
+              type="reset"
+            >
+              <img
+                src="../../../../assets/Images/x-close.svg"
+                alt="close img"
+              />
+            </button>
+          </div>
+          <div class="wrapper-bottom">
+            <div class="left-part">
+              <div class="input-container">
+                <label for="NameInput" [innerHTML]="vm.nameInputLabel"></label>
+                <input
+                  [class.disabled]="_name.disabled"
+                  id="NameInput"
+                  type="text"
+                  class="input"
+                  formControlName="name"
+                  [class.error-input]="
+                    _name.invalid! && (_name.touched || _name.dirty)
+                  "
+                />
+                <div
+                  class="error-msg-container"
+                  *ngIf="_name.invalid! && (_name.touched || _name.dirty)"
+                >
+                  Mandatory filed
+                </div>
+              </div>
+
+              <div class="input-container">
+                <label
+                  for="EmailInput"
+                  [innerHTML]="vm.emailInputLabel"
+                ></label>
+                <input
+                  [class.disabled]="_mail.disabled"
+                  id="EmailInput"
+                  type="text"
+                  class="input"
+                  formControlName="mail"
+                  [class.error-input]="
+                    _mail.invalid! && (_mail.touched || _mail.dirty)
+                  "
+                />
+                <div
+                  class="error-msg-container"
+                  *ngIf="_mail.invalid! && (_mail.touched || _mail.dirty)"
+                >
+                  <div *ngIf="_mail.errors!['required']">Mandatory filed</div>
+                  <div *ngIf="_mail.errors!['patern']">
+                    Incorrect mail format
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-container">
+                <label
+                  for="PhoneInput"
+                  [innerHTML]="vm.phoneInputLabel"
+                ></label>
+                <input
+                  [class.disabled]="_phone.disabled"
+                  id="PhoneInput"
+                  type="tel"
+                  class="input"
+                  formControlName="phone"
+                  [class.error-input]="
+                    _phone.invalid! && (_phone.touched || _phone.dirty)
+                  "
+                />
+                <div
+                  class="error-msg-container"
+                  *ngIf="_phone.invalid! && (_phone.touched || _phone.dirty)"
+                >
+                  <div *ngIf="_phone.errors!['required']">Mandatory filed</div>
+                  <div *ngIf="_phone.errors!['patern']">
+                    Incorrect phone format
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-container textarea-container desktop-hidden">
+                <label
+                  for="MessageInput"
+                  [innerHTML]="vm.messageInputLabel"
+                ></label>
+                <div
+                  class="error-msg-container-textarea"
+                  *ngIf="_msg.invalid! && (_msg.touched || _msg.dirty)"
+                >
+                  <div *ngIf="_name.errors!['required']">Mandatory filed</div>
+                </div>
+                <textarea
+                  [class.disabled]="_msg.disabled"
+                  id="MessageInput"
+                  class="input textarea"
+                  formControlName="msg"
+                  [class.error-input]="
+                    _msg.invalid! && (_msg.touched || _msg.dirty)
+                  "
+                ></textarea>
+              </div>
+
+              <button [disabled]="requeststatus == 'done'" type="submit" class="submit-btn">
+                <span *ngIf="requeststatus == null" [innerHTML]="vm.buttonText"></span>
+                <div *ngIf="requeststatus == 'loading'" class="request-loading"></div>
+                  <img *ngIf="requeststatus == 'done'" class="request-done" src="../../../../assets/Images/check.svg" alt="check" />
+              </button>
+            </div>
+            <div class="right-part mobile-hidden">
+              <div class="input-container textarea-container">
+                <label
+                  for="MessageInput"
+                  [innerHTML]="vm.messageInputLabel"
+                ></label>
+                <div
+                  class="error-msg-container-textarea"
+                  *ngIf="_msg.invalid! && (_msg.touched || _msg.dirty)"
+                >
+                  <div *ngIf="_name.errors!['required']">Mandatory filed</div>
+                </div>
+                <textarea
+                  [class.disabled]="_msg.disabled"
+                  id="MessageInput"
+                  class="input textarea"
+                  formControlName="msg"
+                  [class.error-input]="
+                    _msg.invalid! && (_msg.touched || _msg.dirty)
+                  "
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="border-top"></div>
+          <div class="footer-text" [innerHTML]="vm.footerText | safeHtml"></div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

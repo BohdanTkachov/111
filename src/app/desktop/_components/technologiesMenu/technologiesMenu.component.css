@@ -1,0 +1,292 @@
+.layout {
+  width: 100%;
+  box-sizing: border-box;
+
+  background-color: white;
+}
+
+.desktop-hidden {
+  display: none;
+}
+
+.container {
+  /* padding: 0 90px; */
+  width: 87%;
+  margin: 0 auto;
+  min-height: 540px;
+  display: flex;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.col-1 {
+  width: 21%;
+  flex-direction: column;
+}
+
+h3,
+h3 > p {
+  margin: 0;
+}
+
+h3 {
+  margin-top: 72px;
+
+  font-family: "Satoshi-Black";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #38bc64;
+}
+
+h2 {
+  margin: 0;
+  margin-top: 13px;
+
+  font-family: "Satoshi-Black",sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 49px;
+  text-transform: uppercase;
+  color: #193028;
+}
+
+ul {
+  margin: 0;
+  margin-top: 40px;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin-top: 20px;
+}
+
+li > a {
+  text-decoration: none;
+  font-family: "Satoshi-Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.col-2 {
+  width: 70%;
+  flex-wrap: wrap;
+  padding-top: 73px;
+  padding-left: 60px;
+  padding-bottom: 122px;
+}
+
+.block-container {
+  min-height: 125px;
+  width: 50%;
+  box-sizing: border-box;
+  display: flex;
+  text-decoration: none;
+}
+
+.block {
+  /* width: 85%; */
+  display: flex;
+}
+
+.icon {
+  width: 64px;
+}
+
+.icon-container {
+  margin-right: 24px;
+}
+
+h4 {
+  margin: 0;
+
+  font-family: "Satoshi-Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.block-top-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.description {
+  margin-top: 13px;
+
+  font-family: "Satoshi-Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #0f0f0f;
+}
+
+.block-container:nth-child(1),
+.block-container:nth-child(3) {
+  border-right: 1px solid #dcdcdc;
+  padding-right: 68px;
+}
+
+.block-container:nth-child(1),
+.block-container:nth-child(2) {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.block-container:nth-child(3),
+.block-container:nth-child(4) {
+  padding-top: 60px;
+}
+
+.block-container:nth-child(2),
+.block-container:nth-child(4) {
+  padding-left: 68px;
+}
+
+.arrow {
+  fill: #dcdcdc;
+}
+
+.block-container:hover .arrow {
+  fill: #38bc64;
+}
+
+.block-container:hover h4 {
+  color: #38bc64;
+}
+
+.block-container:hover .description {
+  border-color: #38bc64;
+}
+
+.block-right-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-link {
+  color: #111d19;
+}
+
+.left-link :hover {
+  color: #38bc64;
+}
+
+.horizontal-line {
+  display: flex;
+
+  border-right: 1px solid #dcdcdc;
+}
+
+@media screen and (max-width: 1130px) {
+  .mobile-hidden {
+    display: none;
+  }
+
+  .desctop-hidden {
+    display: block;
+  }
+
+  .container {
+    padding: 0;
+    max-height: 100%;
+  }
+
+  .myHr {
+    display: none;
+  }
+
+  .row {
+    flex-direction: column;
+    padding-bottom: 85px;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .col-1 {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  h2 {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  .arrowLeft {
+    width: 16px;
+    margin-right: 16px;
+  }
+
+  .col-2 {
+    margin-top: 24px;
+    padding: 0;
+  }
+
+  .block-container:nth-child(n) {
+    width: 100%;
+    border: none;
+    padding: 0;
+    margin-bottom: 40px;
+    min-height: auto;
+  }
+
+  .icon {
+    width: 32px;
+  }
+
+  .icon-container {
+    margin-right: 16px;
+  }
+
+  .block {
+    margin: 0 auto;
+
+    width: 100%;
+    max-width: 600px;
+  }
+
+  h4 {
+    font-family: "Satoshi-Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+    color: #000000;
+  }
+
+  .description {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 0.5px solid #dcdcdc;
+
+    font-family: "Satoshi-Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 21px;
+    color: #4f4f4f;
+  }
+}

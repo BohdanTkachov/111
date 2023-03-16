@@ -1,0 +1,156 @@
+.content {
+    display: flex;
+    flex-direction: column;
+
+    margin: auto;
+    width: 87%;
+
+    padding-bottom: 94px;
+    border-bottom: 1px solid #DCDCDC;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-bottom: 64px;
+}
+
+.arrow-down{
+    width: 47px;
+    height: 47px;
+}
+
+.title{
+    font-family: 'Satoshi-Black',sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 61px;
+    color: #111d19;
+
+    text-transform: uppercase;
+}
+
+.content-contailner{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.left{
+    width: 32.7%;
+    height: fit-content;
+    border-right: 1px solid #DCDCDC;
+}
+.left-title{
+    font-family: 'Satoshi-Bold',sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: #38BC64;
+
+    margin-bottom: 24px;
+}
+
+.left-item{
+    font-family: 'Satoshi-Bold',sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: #4F4F4F;
+
+    margin-bottom: 16px;
+}
+
+.right{
+    display: flex;
+    flex-direction: row;
+}
+
+.right-item{
+    margin-left: 124px;
+}
+
+.stage-title{
+    font-family: 'Satoshi-Black',sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 28px;
+    color: #0F0F0F;
+
+    margin-bottom: 16px;
+}
+
+.right-stage-child{
+    font-family: 'Satoshi-Medium',sans-serif;
+    font-weight: 500;
+    color: #0F0F0F;
+    font-size: 18px;
+    line-height: 28px;
+
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 1130px){
+    .content{
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .title{
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .arrow-down{
+        width: 24px;
+        height: 24px;
+    }
+
+    .content-contailner{
+        flex-direction: column;
+    }
+
+    .left{
+        width: 100%;
+        border-right: none;
+
+        padding-bottom: 8px;
+        border-bottom: 1px solid #DCDCDC;
+        margin-bottom: 24px;
+    }
+
+    .left-title{
+        font-size: 10px;
+        line-height: 15px;
+
+        margin-bottom: 16px;
+    }
+
+    .left-item{
+        font-size: 12px;
+        line-height: 18px;
+
+        margin-bottom: 8px;
+    }
+
+
+    .right-item{
+        margin-left: 0;
+
+        width: 47%;
+        margin-right: 16px;
+    }
+
+    .stage-title{
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .right-stage-child{
+        font-size: 12px;
+        line-height: 18px;
+    }
+}

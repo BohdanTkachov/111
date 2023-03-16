@@ -1,0 +1,164 @@
+.layout {
+  width: 87%;
+  max-width: 1670px;
+  margin: auto;
+}
+
+.content {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+.upLine {
+  margin-top: 50px;
+  border: 1px solid #DCDCDC;
+}
+
+.centrLine {
+  margin-left: 5%;
+  margin-right: 10%;
+  border: 1px solid #DCDCDC;
+}
+
+.upBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  margin-right: 27px;
+}
+
+.img {
+  margin-top: 80px;
+}
+
+.leftBlock {
+  width: 40%;
+}
+
+.rightBlock {
+  margin-right: 110px;
+  width: 60%;
+}
+
+.contentBlock {
+  display: flex;
+  flex-direction: row;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  font-family: "Satoshi-Black", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 61px;
+  text-transform: uppercase;
+}
+
+.descroption {
+  margin-top: 35px;
+  font-family: "Satoshi-Medium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+:host>>>br {
+  display: none;
+}
+
+@media screen and (max-width: 1440px) {
+  :host>>>br {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  :host>>>br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .img {
+    margin-top: 32px;
+  }
+
+  .upBlock {
+    width: 90%;
+    margin: auto;
+  }
+
+  .contentBlock {
+    flex-direction: column;
+  }
+
+  .leftBlock {
+    width: 100%;
+  }
+
+  .rightBlock {
+    margin-right: 0px;
+    margin-top: -35px;
+    width: 100%;
+  }
+
+  .centrLine {
+    display: none;
+  }
+
+  .layout {
+    width: 100%;
+  }
+
+  .title {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .descroption {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .iconArrow {
+    display: none;
+  }
+
+  .titleBlock {
+    align-items: center;
+  }
+
+  .content {
+    margin: auto;
+    margin-top: 40px;
+  }
+
+  .upLine {
+    margin-top: 24px;
+  }
+
+  :host>>>span {
+    color: #111D19;
+    font-weight: normal;
+  }
+
+}

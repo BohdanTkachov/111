@@ -1,0 +1,65 @@
+<div class="layout">
+  <div class="content">
+    <div class="upBlock">
+      <div class="title">
+        <div class="titleBlock">
+          <img
+            class="icon"
+            [src]="vm.iconStarUrl"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-easing="ease"
+            data-aos-duration="400"
+          />
+          <div
+            [innerHTML]="vm.title | safeHtml"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-easing="ease"
+            data-aos-duration="400"
+          ></div>
+        </div>
+        <img
+          class="iconArrow"
+          [src]="vm.iconArrowUrl"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-easing="ease"
+          data-aos-duration="400"
+        />
+      </div>
+      <div class="upLine"></div>
+      <div class="contentBlock">
+        <div class="leftBlock">
+          <div
+            class="descroption"
+            [innerHTML]="vm.descriptionLeft | safeHtml"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-easing="ease"
+            data-aos-duration="400"
+          ></div>
+        </div>
+        <div class="centrLine"></div>
+        <div class="rightBlock">
+          <div
+            class="descroption"
+            [innerHTML]="vm.descriptionRight | safeHtml"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-easing="ease"
+            data-aos-duration="400"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <img
+      class="img"
+      [src]="GetImg()"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    />
+  </div>
+</div>

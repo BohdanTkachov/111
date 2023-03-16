@@ -1,0 +1,29 @@
+<div class="layout">
+  <div class="item-container">
+    <img
+      class="icon"
+      alt="Icon"
+      [src]="vm.imageUrl"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    />
+    <div
+      class="itemTitle"
+      [innerHTML]="vm.title | safeHtml"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    ></div>
+    <div
+      class="itemDescription"
+      [innerHTML]="vm.description | safeHtml"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    ></div>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+<div class="main-layout">
+  <div class="layout">
+    <div class="container">
+      <div class="wrapper-top">
+        <h2
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-easing="ease"
+          data-aos-duration="400"
+        >
+          <p [innerHtml]="vm.header | safeHtml"></p>
+        </h2>
+
+        <div
+          class="circle"
+          data-aos="fade-down"
+          data-aos-delay="200"
+          data-aos-easing="ease"
+          data-aos-duration="400"
+        >
+          <img src="../../../../assets/Images/ArrowB.svg" alt="Arrow" />
+        </div>
+      </div>
+
+      <div class="wrapper-bottom">
+        <div class="tree-col">
+          <img
+            [src]="vm.imageUrl"
+            alt="Tree"
+            class="tree"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-easing="ease"
+            data-aos-duration="400"
+          />
+        </div>
+
+        <div class="content-wrapper">
+          <ng-container
+            *ngFor="let item of vm.content; last as isLast; even as isEven"
+          >
+            <div
+              [ngClass]="{
+                'content-block': true,
+                'block-big': isLast && isEven
+              }"
+            >
+              <h3
+                [innerHtml]="item.index"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-easing="ease"
+                data-aos-duration="400"
+              ></h3>
+              <div
+                class="description"
+                [innerHtml]="item.description | safeHtml"
+                data-aos="fade-up"
+                data-aos-delay="600"
+              ></div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

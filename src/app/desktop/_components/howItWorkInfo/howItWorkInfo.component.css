@@ -1,0 +1,157 @@
+.main-container {
+  display: flex;
+  background-color: #111D19;
+  color: #ffffff;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 180px;
+  margin-bottom: 106px;
+}
+
+.header {
+  font-family: "Satoshi-Black";
+  font-size: 48px;
+  max-width: 600px;
+  text-transform: uppercase;
+}
+
+.content-container {
+  width: 100%;
+  margin-left: 90px;
+  margin-right: 90px;
+}
+
+.image {
+  width: 47px;
+}
+
+.items-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.item-container {
+  display: grid;
+  grid-template-columns: 1fr 720px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.number-title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.number-item {
+  color: #38bc64;
+  font-family: "Satoshi-Bold";
+  font-size: 20px;
+
+  width: 168px;
+}
+
+.title-item {
+  font-family: "Satoshi-Bold";
+  font-size: 20px;
+  width: 100%;
+}
+
+.description-item {
+  font-family: "Satoshi-Medium";
+  font-size: 16px;
+  color: #c7cacb;
+  width: 720px;
+}
+
+.line-item {
+  height: 1px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.1;
+}
+
+@media screen and (max-width: 1130px) {
+  :host>>>br {
+    display: none;
+  }
+
+  .content-container {
+    margin-left: 16px;
+    margin-right: 16px;
+    width: calc(100% - 32px);
+  }
+
+  .items-container {
+    margin-bottom: 0;
+  }
+
+  .item-container {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 0;
+    padding-bottom: 24px;
+  }
+
+  .title-item {
+    justify-content: start;
+    margin-left: 16px;
+  }
+
+  .description-item {
+    width: auto;
+  }
+
+  .title-item {
+    justify-content: flex-start;
+    margin-left: 16px;
+
+    font-size: 16px;
+    line-height: 40px;
+    color: #F8F7F2;
+  }
+
+  .header-container {
+    margin-bottom: 80px;
+    margin-top: 50px;
+  }
+
+  .header {
+    font-size: 18px;
+    max-width: unset;
+    width: 65%;
+  }
+
+  .image {
+    width: 24px;
+  }
+
+  .number-item {
+    width: 40px;
+  }
+
+  .line-item{
+    display: none;
+  }
+
+  .number-title-container{
+    padding-bottom: 13px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #f8f7f21a;
+    align-items: center;
+  }
+}

@@ -1,0 +1,42 @@
+<div class="layout">
+  <div class="content">
+    <div
+      class="leftBlock"
+      data-aos="fade-right"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    >
+      <p class="title" [innerHTML]="vm.title"></p>
+      <p class="description" [innerHTML]="vm.description"></p>
+    </div>
+    <div
+      class="btnBlock"
+      data-aos="fade-right"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    >
+      <buttonBottomBorderGreenWithArrow
+        [contentText]="vm.btnName"
+      ></buttonBottomBorderGreenWithArrow>
+    </div>
+    <div
+      class="rightBlock"
+      data-aos="fade-left"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    >
+      <img (click)="onOpenModal()" [src]="vm.logoBigUrl" class="big" />
+      <img (click)="onOpenModal()" [src]="vm.logoSmallUrl" class="small" />
+    </div>
+  </div>
+  <modalCaseHeader
+    class="modal"
+    (onOpenModal)="onOpenModal()"
+    (onClouseModal)="onClouseModal()"
+    [vm]="vm.modelViewModel"
+    *ngIf="isModalDialogVisible"
+  ></modalCaseHeader>
+</div>

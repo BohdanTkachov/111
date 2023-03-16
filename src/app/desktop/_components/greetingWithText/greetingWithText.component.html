@@ -1,0 +1,78 @@
+<div class="layout" [style.paddingBottom]="paddingBottom">
+  <div class="content">
+    <h2
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+      [innerHtml]="vm.header | safeHtml"
+      class="header"
+    ></h2>
+
+    <div
+      class="header-preview desctop-hidden"
+      [class.text-uppercase]="!isMainPage"
+      [innerHtml]="vm.headerPreview | safeHtml"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    ></div>
+
+    <div class="mobile-container">
+      <div class="mobile-row">
+        <img
+          class="arrow-down desctop-hidden"
+          src="../../../../assets/Images/BlackArrow.svg"
+          alt="arrow"
+        />
+        <div
+          class="description"
+          [innerHtml]="vm.description | safeHtml"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-easing="ease"
+          data-aos-duration="400"
+        ></div>
+      </div>
+
+      <div
+        class="header-preview mobile-hidden"
+        [class.text-uppercase]="!isMainPage"
+        [innerHtml]="vm.headerPreview | safeHtml"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      ></div>
+
+      <buttonBottomBorderGreenWithArrow
+        *ngIf="!isMainPage"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+        [contentText]="vm.buttonText"
+        class="btn mobile-hidden"
+      ></buttonBottomBorderGreenWithArrow>
+      <buttonGreen
+        *ngIf="isMainPage"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+        [contentText]="vm.buttonText"
+        class="btn mobile-hidden"
+      ></buttonGreen>
+
+      <buttonGreen
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+        [contentText]="vm.buttonText"
+        class="btn desctop-hidden"
+      ></buttonGreen>
+    </div>
+  </div>
+</div>

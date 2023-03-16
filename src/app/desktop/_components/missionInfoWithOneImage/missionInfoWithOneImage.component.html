@@ -1,0 +1,42 @@
+<div class="layout">
+  <div class="main-container">
+    <div
+      class="header"
+      [innerHTML]="vm.header | safeHtml"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease"
+      data-aos-duration="400"
+    ></div>
+
+    <div class="content-container">
+      <div
+        class="image-container"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-easing="ease"
+        data-aos-duration="400"
+      >
+        <img class="image" [src]="vm.image" />
+      </div>
+
+      <div class="text-container">
+        <div
+          [innerHTML]="vm.content[0] | safeHtml"
+          class="first-text-element"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-easing="ease"
+          data-aos-duration="400"
+        ></div>
+        <div
+          [innerHTML]="vm.content[1] | safeHtml"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-easing="ease"
+          data-aos-duration="400"
+        ></div>
+      </div>
+    </div>
+  </div>
+</div>
